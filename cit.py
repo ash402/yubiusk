@@ -144,11 +144,11 @@ if __name__ == '__main__':
     fout.write('\n')
     
     fout.write(f'(C) Following <{len(data2[0])}> players meet all requirements except 6-months-in-game, and will immediately become citizens 6 months after their listed start date:\n')
-    [fout.write(f'{p.missing_HR}:\t{p.persona}\n') for p in data2[0]]
+    [fout.write(f'{p.missing_HR}:\t{p.persona} ({p.first_attendance})\n') for p in data2[0]]
     fout.write('\n')
     
-    fout.write(f'(D) Following <{len(data2[0])}> players meet attendance requirements but not 6-months-in-game; they may become citizens 6 months after their listed start date if they pay dues and/or sign waiver:\n')
-    [fout.write(f'{p.missing_HR}:\t{p.persona}\n') for p in data2[1]]
+    fout.write(f'(D) Following <{len(data2[1])}> players meet attendance requirements but not 6-months-in-game; they may become citizens 6 months after their listed start date if they pay dues and/or sign waiver:\n')
+    [fout.write(f'{p.missing_HR}:\t{p.persona} ({p.first_attendance})\n') for p in data2[1]]
     fout.write('\n')
     
     fout.close()
